@@ -3,6 +3,10 @@
 A small Docker-deployable static website for tracking reward model and process
 reward model study progress.
 
+Primary tracker:
+
+https://github.com/users/LeonHWU/projects/1
+
 ## Run Locally
 
 Open `index.html` directly, or run it with Docker:
