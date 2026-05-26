@@ -5,7 +5,7 @@ reward model study progress.
 
 Primary tracker:
 
-https://github.com/users/LeonHWU/projects/1
+https://github.com/users/LeonHWU/projects/2
 
 ## Run Locally
 
