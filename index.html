@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Reward Model Learning Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav">
+        <a class="brand" href="#">RM Tracker</a>
+        <div class="nav-links">
+          <a href="#roadmap">Roadmap</a>
+          <a href="#project">Project</a>
+          <a href="#interview">Interview</a>
+          <a href="#log">Log</a>
+        </div>
+      </nav>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Reward model training foundation</p>
+          <h1>Track the path from Transformer basics to production reward models.</h1>
+          <p class="hero-copy">
+            A practical dashboard for learning preference modeling, RM training,
+            evaluation, RLHF context, and interview readiness.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#roadmap">View roadmap</a>
+            <a class="button" href="#project">Project milestones</a>
+          </div>
+        </div>
+        <aside class="summary-panel" aria-label="Learning progress summary">
+          <div class="summary-value" id="overall-progress">0%</div>
+          <p>Overall progress</p>
+          <div class="progress-track">
+            <span id="overall-progress-bar"></span>
+          </div>
+        </aside>
+      </section>
+    </header>
+
+    <main>
+      <section class="section" id="roadmap">
+        <div class="section-heading">
+          <p class="eyebrow">Roadmap</p>
+          <h2>Core learning blocks</h2>
+        </div>
+        <div class="grid roadmap-grid" id="roadmap-grid"></div>
+      </section>
+
+      <section class="section split" id="project">
+        <div class="section-heading">
+          <p class="eyebrow">Portfolio project</p>
+          <h2>Reward model training project</h2>
+          <p>
+            Build an end-to-end RM pipeline that is small enough to finish fast
+            but serious enough to discuss in a labs interview.
+          </p>
+        </div>
+        <div class="milestone-list" id="milestone-list"></div>
+      </section>
+
+      <section class="section" id="interview">
+        <div class="section-heading">
+          <p class="eyebrow">Interview</p>
+          <h2>Topics to explain clearly</h2>
+        </div>
+        <div class="grid topic-grid" id="topic-grid"></div>
+      </section>
+
+      <section class="section split" id="log">
+        <div class="section-heading">
+          <p class="eyebrow">Learning log</p>
+          <h2>Weekly check-ins</h2>
+          <p>
+            Update <code>data.js</code> after each study session. Keep entries
+            concrete: what you trained, evaluated, debugged, or read.
+          </p>
+        </div>
+        <div class="log-list" id="log-list"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Built to track reward model learning, experiments, and interview readiness.</p>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
