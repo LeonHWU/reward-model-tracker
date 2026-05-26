@@ -1,6 +1,11 @@
 window.trackerData = {
   priorities: [
     {
+      stage: "第一步",
+      content: "Transformer 原理 + 语言模型基础",
+      priority: "基础，快速确认",
+    },
+    {
       stage: "第二步",
       content: "偏好学习的数学与数据：Bradley-Terry、chosen/rejected",
       priority: "最高",
@@ -28,7 +33,15 @@ window.trackerData = {
   ],
   tasks: [
     {
-      stage: "第一步：语言模型基础",
+      stage: "第一步：Transformer 与语言模型基础",
+      title: "掌握 Transformer 原理",
+      detail: "能讲清楚 self-attention、Q/K/V、multi-head attention、position encoding、residual、layer norm、FFN。",
+      priority: "基础",
+      progress: 100,
+      status: "done",
+    },
+    {
+      stage: "第一步：Transformer 与语言模型基础",
       title: "确认预训练 + SFT 的关系",
       detail: "SFT 是在预训练 LM 上做指令微调，为 RM 提供基座。",
       priority: "快速过",
@@ -36,7 +49,7 @@ window.trackerData = {
       status: "active",
     },
     {
-      stage: "第一步：语言模型基础",
+      stage: "第一步：Transformer 与语言模型基础",
       title: "确认 next token prediction 训练目标",
       detail: "本质是对下一个 token 做分类，用交叉熵损失。",
       priority: "快速过",
