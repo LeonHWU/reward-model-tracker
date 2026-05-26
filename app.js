@@ -1,30 +1,46 @@
 const data = window.trackerData;
 
 const statusLabel = {
-  done: "Done",
-  active: "In progress",
-  todo: "Not started",
+  done: "完成",
+  active: "进行中",
+  todo: "未开始",
 };
 
-function renderTopics() {
-  const list = document.querySelector("#topic-list");
-  list.innerHTML = data.topics
+function renderPriorities() {
+  const list = document.querySelector("#priority-list");
+  list.innerHTML = data.priorities
     .map(
-      (topic) => `
-        <article class="topic-row">
+      (item) => `
+        <div class="priority-row">
+          <strong>${item.stage}</strong>
+          <span>${item.content}</span>
+          <em>${item.priority}</em>
+        </div>
+      `,
+    )
+    .join("");
+}
+
+function renderTasks() {
+  const list = document.querySelector("#task-list");
+  list.innerHTML = data.tasks
+    .map(
+      (task) => `
+        <article class="task-row">
+          <div class="stage">${task.stage}</div>
           <div>
-            <h2 class="topic-title">${topic.title}</h2>
-            <p class="topic-goal">${topic.goal}</p>
+            <h3>${task.title}</h3>
+            <p>${task.detail}</p>
           </div>
-          <p class="topic-why">${topic.why}</p>
+          <div class="priority">${task.priority}</div>
           <div class="progress-cell">
-            <div class="progress-label">${topic.progress}%</div>
-            <div class="progress-track" aria-label="${topic.title} progress">
-              <span style="width: ${topic.progress}%"></span>
+            <div class="progress-label">${task.progress}%</div>
+            <div class="progress-track" aria-label="${task.title} 进度">
+              <span style="width: ${task.progress}%"></span>
             </div>
           </div>
           <div>
-            <span class="status ${topic.status}">${statusLabel[topic.status]}</span>
+            <span class="status ${task.status}">${statusLabel[task.status]}</span>
           </div>
         </article>
       `,
@@ -33,11 +49,12 @@ function renderTopics() {
 }
 
 function renderOverallProgress() {
-  const values = data.topics.map((topic) => topic.progress);
+  const values = data.tasks.map((task) => task.progress);
   const average = Math.round(values.reduce((sum, value) => sum + value, 0) / values.length);
   document.querySelector("#overall-progress").textContent = `${average}%`;
   document.querySelector("#overall-progress-bar").style.width = `${average}%`;
 }
 
-renderTopics();
+renderPriorities();
+renderTasks();
 renderOverallProgress();

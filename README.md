@@ -1,7 +1,7 @@
-# Reward Model Study Tracker
+# Reward Model 训练学习路径
 
-A small Docker-deployable static website for tracking what to learn for reward
-model training and the current progress for each topic.
+A small Docker-deployable static website for tracking reward model and process
+reward model study progress.
 
 ## Run Locally
 
@@ -20,11 +20,10 @@ http://localhost:8080
 
 ## Update Progress
 
-Edit `data.js` and update the `topics` list:
+Edit `data.js` and update:
 
-- `title`: topic name
-- `why`: why this topic matters
-- `goal`: concrete learning target
+- `priorities`: high-level priority overview
+- `tasks`: concrete learning checklist items
 - `progress`: percentage complete
 - `status`: `todo`, `active`, or `done`
 

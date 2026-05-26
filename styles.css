@@ -20,22 +20,22 @@ body {
   color: var(--text);
   font-family:
     Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    sans-serif;
+    "PingFang SC", "Microsoft YaHei", sans-serif;
   line-height: 1.5;
 }
 
 .page {
   margin: 0 auto;
-  max-width: 1120px;
-  padding: 48px 20px;
+  max-width: 1200px;
+  padding: 40px 20px;
 }
 
 .header {
   align-items: end;
   display: grid;
   gap: 24px;
-  grid-template-columns: 1fr 280px;
-  margin-bottom: 32px;
+  grid-template-columns: 1fr 260px;
+  margin-bottom: 28px;
 }
 
 .label {
@@ -48,35 +48,68 @@ body {
 }
 
 h1 {
-  font-size: 44px;
-  line-height: 1.05;
-  margin: 0 0 12px;
+  font-size: 42px;
+  line-height: 1.1;
+  margin: 0 0 10px;
 }
 
-.intro {
-  color: var(--muted);
-  font-size: 18px;
+h2 {
+  font-size: 22px;
+  margin: 0 0 14px;
+}
+
+h3 {
+  font-size: 16px;
+  margin: 0 0 6px;
+}
+
+p {
   margin: 0;
-  max-width: 680px;
 }
 
-.progress-summary {
+.intro,
+.links,
+.task-row p {
+  color: var(--muted);
+}
+
+.links {
+  margin-top: 8px;
+}
+
+.links span {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.progress-summary,
+.section {
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 8px;
+}
+
+.progress-summary {
   padding: 18px;
 }
 
 .progress-number {
-  font-size: 40px;
+  font-size: 38px;
   font-weight: 850;
-  margin-bottom: 12px;
+}
+
+.progress-caption,
+.progress-label {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+  margin-bottom: 8px;
 }
 
 .progress-track {
   background: #e8edf4;
   border-radius: 999px;
-  height: 10px;
+  height: 9px;
   overflow: hidden;
 }
 
@@ -87,18 +120,40 @@ h1 {
   width: 0;
 }
 
-.tracker {
-  background: var(--surface);
+.section {
+  margin-top: 18px;
+  overflow: hidden;
+  padding: 18px;
+}
+
+.priority-table {
   border: 1px solid var(--line);
   border-radius: 8px;
   overflow: hidden;
 }
 
-.tracker-header,
-.topic-row {
+.priority-row {
   display: grid;
-  gap: 18px;
-  grid-template-columns: 1.15fr 1.8fr 180px 120px;
+  gap: 16px;
+  grid-template-columns: 120px 1fr 160px;
+  padding: 12px 14px;
+}
+
+.priority-row + .priority-row {
+  border-top: 1px solid var(--line);
+}
+
+.priority-row em {
+  color: var(--accent);
+  font-style: normal;
+  font-weight: 800;
+}
+
+.tracker-header,
+.task-row {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 190px 1fr 120px 150px 100px;
 }
 
 .tracker-header {
@@ -106,40 +161,21 @@ h1 {
   color: var(--muted);
   font-size: 13px;
   font-weight: 800;
-  padding: 14px 18px;
-  text-transform: uppercase;
+  margin: 0 -18px;
+  padding: 12px 18px;
 }
 
-.topic-row {
+.task-row {
   border-top: 1px solid var(--line);
-  padding: 18px;
+  margin: 0 -18px;
+  padding: 16px 18px;
 }
 
-.topic-title {
-  font-size: 17px;
-  font-weight: 800;
-  margin: 0 0 6px;
-}
-
-.topic-goal,
-.topic-why {
-  color: var(--muted);
-  margin: 0;
-}
-
-.topic-goal {
-  font-size: 14px;
-}
-
-.progress-cell {
-  min-width: 0;
-}
-
-.progress-label {
+.stage,
+.priority {
   color: var(--muted);
   font-size: 14px;
   font-weight: 800;
-  margin-bottom: 8px;
 }
 
 .status {
@@ -165,14 +201,11 @@ h1 {
   color: var(--todo);
 }
 
-@media (max-width: 820px) {
-  .page {
-    padding: 32px 16px;
-  }
-
+@media (max-width: 900px) {
   .header,
+  .priority-row,
   .tracker-header,
-  .topic-row {
+  .task-row {
     grid-template-columns: 1fr;
   }
 
