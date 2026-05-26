@@ -1,7 +1,7 @@
-# Reward Model Learning Tracker
+# Reward Model Study Tracker
 
-A small Docker-deployable static website for tracking reward model learning,
-experiments, and interview readiness.
+A small Docker-deployable static website for tracking what to learn for reward
+model training and the current progress for each topic.
 
 ## Run Locally
 
@@ -20,14 +20,14 @@ http://localhost:8080
 
 ## Update Progress
 
-Edit `data.js`:
+Edit `data.js` and update the `topics` list:
 
-- `roadmap`: learning blocks and progress percentages
-- `milestones`: portfolio project milestones
-- `interviewTopics`: topics to prepare for labs interviews
-- `logs`: weekly learning notes
+- `title`: topic name
+- `why`: why this topic matters
+- `goal`: concrete learning target
+- `progress`: percentage complete
+- `status`: `todo`, `active`, or `done`
 
 ## Suggested Repo Description
 
-Dockerized learning tracker for reward model training, RLHF foundations, eval
-diagnostics, and interview preparation.
+Dockerized progress tracker for reward model training foundations.
