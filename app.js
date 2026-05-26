@@ -1,9 +1,9 @@
 const data = window.trackerData;
 
 const statusLabel = {
-  done: "完成",
-  active: "进行中",
-  todo: "未开始",
+  done: "Done",
+  active: "In progress",
+  todo: "Not started",
 };
 
 function renderPriorities() {
@@ -35,7 +35,7 @@ function renderTasks() {
           <div class="priority">${task.priority}</div>
           <div class="progress-cell">
             <div class="progress-label">${task.progress}%</div>
-            <div class="progress-track" aria-label="${task.title} 进度">
+            <div class="progress-track" aria-label="${task.title} progress">
               <span style="width: ${task.progress}%"></span>
             </div>
           </div>

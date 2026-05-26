@@ -1,4 +1,4 @@
-# Reward Model 训练学习路径
+# Reward Model Training Roadmap
 
 A small Docker-deployable static website for tracking reward model and process
 reward model study progress.
